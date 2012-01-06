@@ -1,0 +1,14 @@
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+    </plugin-info>
+    <jql-function key="firstUnreleasedVersion" name="earliestUnreleasedVersion relative to project" class="no.prokom.jira.plugins.jql.firstUnreleasedVersionFunction">
+        <!--The name of the function-->
+        <fname>firstUnreleasedVersion</fname>
+        <description>Provides a JQL function to search for issues in the earliest unreleased version relative to the project.</description>
+        <!--Whether this function returns a list or a single value-->
+        <list>true</list>
+    </jql-function>
+</atlassian-plugin>
